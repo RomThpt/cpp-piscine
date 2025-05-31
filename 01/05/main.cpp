@@ -9,3 +9,11 @@
 /*                                                                                                  */
 /* ************************************************************************************************ */
 
+
+#include "includes/Harl.class.hpp"
+
+
+int main(void) {
+    Harl harl;
+    harl.complain("debug");
+}

@@ -15,9 +15,7 @@ CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 
 # Project files
 SRCS = main.cpp \
-       src/HumanA.class.cpp \
-       src/HumanB.class.cpp \
-       src/Weapon.class.cpp
+       src/Harl.class.cpp
 
 OBJS = $(SRCS:%.cpp=objects/%.o)
 NAME = program
@@ -33,7 +31,7 @@ objects/%.o: %.cpp
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 clean:
-	rm -f $(OBJS)
+	rm -rf objects/
 
 fclean: clean
 	rm -f $(NAME)

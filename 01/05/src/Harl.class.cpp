@@ -10,6 +10,7 @@
 /* ************************************************************************************************ */
 
 #include <iostream>
+#include <map>
 #include "../includes/Harl.class.hpp"
 
 
@@ -34,5 +35,14 @@ void Harl::error(void) {
 }
 
 void Harl::complain(std::string level){
+    std::map<std::string, void(Harl::*)()>  actions;
+
+    actions["debug"] = &Harl::debug;
+    actions["info"] = &Harl::info;
+    actions["warning"] = &Harl::warning;
+    actions["error"] = &Harl::error;
+
+    Harl harl ;
+    (harl.*actions[level])();
 
 }

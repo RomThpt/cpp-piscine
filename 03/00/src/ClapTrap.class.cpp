@@ -9,7 +9,7 @@
 /*                                                                                                  */
 /* ************************************************************************************************ */
 
-#include "ClapTrap.class.h"
+#include "../includes/ClapTrap.class.h"
 
 ClapTrap::ClapTrap()
 {
@@ -49,7 +49,7 @@ void ClapTrap::attack(const std::string &target)
     if (this->energyPoints > 0)
     {
         this->energyPoints--;
-        std::cout << "ClapTrap " << this->name << "attacks" << target << "causing" << this->attackDamage << "points of damage!" << std::endl;
+        std::cout << "ClapTrap " << this->name << " attacks " << target << " causing " << this->attackDamage << " points of damage!" << std::endl;
     }
     return;
 }
@@ -57,8 +57,8 @@ void ClapTrap::attack(const std::string &target)
 void ClapTrap::takeDamage(unsigned int amount)
 {
     this->hitPoints -= amount;
-    std::cout << "ClapTrap " << this->name << "takes" << amount << "points of damage!" << std::endl;
-    std::cout << "ClapTrap " << this->name << "has " << this->hitPoints << "HP" << std::endl;
+    std::cout << "ClapTrap " << this->name << " takes " << amount << " points of damage!" << std::endl;
+    std::cout << "ClapTrap " << this->name << " has " << this->hitPoints << " HP" << std::endl;
     return;
 }
 
@@ -68,7 +68,7 @@ void ClapTrap::beRepaired(unsigned int amount)
     {
         this->energyPoints--;
         this->hitPoints += amount;
-        std::cout << "ClapTrap " << this->name << "repairs" << amount << "of hit point" << std::endl;
+        std::cout << "ClapTrap " << this->name << " repairs " << amount << " of hit point " << std::endl;
     }
     return;
 }

@@ -2,20 +2,21 @@
 
 CXX = g++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98 -Iincludes
-SRC = main.cpp src/Animal.cpp src/Cat.class.cpp src/Dog.class.cpp
-OBJ = $(SRC:.cpp=.o)
+SRCDIR = src
+SOURCES = main.cpp $(wildcard $(SRCDIR)/*.cpp)
+OBJECTS = $(SOURCES:.cpp=.o)
 NAME = main
 
 all: $(NAME)
 
-$(NAME): $(OBJ)
-	$(CXX) $(CXXFLAGS) -o $(NAME) $(OBJ)
+$(NAME): $(OBJECTS)
+	$(CXX) $(CXXFLAGS) -o $(NAME) $(OBJECTS)
 
 %.o: %.cpp
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 clean:
-	rm -f $(OBJ)
+	rm -f $(OBJECTS)
 
 fclean: clean
 	rm -f $(NAME)

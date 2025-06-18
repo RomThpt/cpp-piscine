@@ -11,6 +11,8 @@
 
 #include "includes/Cat.class.h"
 #include "includes/Dog.class.h"
+#include "includes/WrongAnimal.class.h"
+#include "includes/WrongCat.class.h"
 
 int main()
 {
@@ -23,6 +25,10 @@ int main()
     i->makeSound(); // will output the cat sound!
     j->makeSound();
     meta->makeSound();
+
+    delete meta;
+    delete i;
+    delete j;
 
     return 0;
 }

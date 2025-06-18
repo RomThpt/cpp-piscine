@@ -22,7 +22,7 @@ public:
     ~Dog(void);
     Dog(const Dog &cpy);
     Dog &operator=(const Animal &cpy);
-    virtual void makeSound(void) const;
+    void makeSound(void) const;
 };
 
 #endif

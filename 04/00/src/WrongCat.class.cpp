@@ -1,27 +1,19 @@
 /* ************************************************************************************************ */
 /*                                                                                                  */
-/*    File Name  : Cat.cpp                           ███████╗███████╗██╗██╗    ██╗   ██╗            */
+/*    File Name  : WrongCat.class.cpp                ███████╗███████╗██╗██╗    ██╗   ██╗            */
 /*                                                   ██╔════╝██╔════╝██║██║    ██║   ██║            */
 /*    Author     : RomThpt <r██@edu.devinci.fr>      █████╗  ███████╗██║██║    ██║   ██║            */
-/*    Created    : 2025/06/16 16:14:20               ██╔══╝  ╚════██║██║██║    ╚██╗ ██╔╝            */
-/*    Updated    : 2025/06/16 16:14:20               ███████╗███████║██║███████╗╚████╔╝             */
+/*    Created    : 2025/06/18 14:52:14               ██╔══╝  ╚════██║██║██║    ╚██╗ ██╔╝            */
+/*    Updated    : 2025/06/18 14:52:14               ███████╗███████║██║███████╗╚████╔╝             */
 /*                                                   ╚══════╝╚══════╝╚═╝╚══════╝ ╚═══╝              */
 /*                                                                                                  */
 /* ************************************************************************************************ */
 
-#include "../includes/Cat.class.h"
+#include "../includes/WrongCat.class.h"
 
-Cat::Cat(void)
-{
-    std::cout << "Cat Constructor Called" << std::endl;
-    return;
-}
-Cat::~Cat(void)
-{
-    std::cout << "Cat Destructor Called" << std::endl;
-    return;
-}
-void Cat::makeSound(void) const
+WrongCat::WrongCat(void) {}
+WrongCat::~WrongCat(void) {}
+void WrongCat::makeSound(void) const
 {
     std::cout << "MEOW MEOW BODYCOUNT" << std::endl;
     return;

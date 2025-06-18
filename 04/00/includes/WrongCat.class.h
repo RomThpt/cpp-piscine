@@ -1,28 +1,28 @@
 /* ************************************************************************************************ */
 /*                                                                                                  */
-/*    File Name  : Cat.cpp                           ███████╗███████╗██╗██╗    ██╗   ██╗            */
+/*    File Name  : WrongCat.class.cpp                ███████╗███████╗██╗██╗    ██╗   ██╗            */
 /*                                                   ██╔════╝██╔════╝██║██║    ██║   ██║            */
 /*    Author     : RomThpt <r██@edu.devinci.fr>      █████╗  ███████╗██║██║    ██║   ██║            */
-/*    Created    : 2025/06/16 16:14:20               ██╔══╝  ╚════██║██║██║    ╚██╗ ██╔╝            */
-/*    Updated    : 2025/06/16 16:14:20               ███████╗███████║██║███████╗╚████╔╝             */
+/*    Created    : 2025/06/18 14:51:09               ██╔══╝  ╚════██║██║██║    ╚██╗ ██╔╝            */
+/*    Updated    : 2025/06/18 14:51:09               ███████╗███████║██║███████╗╚████╔╝             */
 /*                                                   ╚══════╝╚══════╝╚═╝╚══════╝ ╚═══╝              */
 /*                                                                                                  */
 /* ************************************************************************************************ */
 
-#include "../includes/Cat.class.h"
+#ifndef WRONG_CAT_CLASS_H
+#define WRONG_CAT_CLASS_H
 
-Cat::Cat(void)
+#include <iostream>
+#include "WrongAnimal.class.h"
+
+class WrongCat : public WrongAnimal
 {
-    std::cout << "Cat Constructor Called" << std::endl;
-    return;
-}
-Cat::~Cat(void)
-{
-    std::cout << "Cat Destructor Called" << std::endl;
-    return;
-}
-void Cat::makeSound(void) const
-{
-    std::cout << "MEOW MEOW BODYCOUNT" << std::endl;
-    return;
-}
+public:
+    WrongCat(void);
+    virtual ~WrongCat(void);
+    WrongCat(const WrongAnimal &cpy);
+    WrongCat &operator=(const WrongAnimal &cpy);
+    virtual void makeSound(void) const;
+};
+
+#endif

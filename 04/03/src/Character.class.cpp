@@ -19,9 +19,8 @@ Character::Character(std::string const &name) : _name(name)
     std::cout << "Character Constructor Called" << std::endl;
 }
 
-Character::Character(const Character &cpy)
+Character::Character(const Character &cpy) : _name(cpy._name)
 {
-    _name = cpy._name;
     for (int i = 0; i < 4; i++)
         _inventory[i] = cpy._inventory[i] ? cpy._inventory[i]->clone() : NULL;
     std::cout << "Character Copy Constructor Called" << std::endl;
@@ -59,7 +58,7 @@ void Character::equip(AMateria *m)
         return;
     for (int i = 0; i < 4; i++)
     {
-        if (!_inventory[i])
+        if (!_inventory[i]) // IF NULL
         {
             _inventory[i] = m;
             std::cout << m->getType() << " equiped" << std::endl;

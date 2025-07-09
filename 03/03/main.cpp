@@ -11,6 +11,7 @@
 
 #include "includes/ScavTrap.class.h"
 #include "includes/FlagTrap.class.h"
+#include "includes/DiamondTrap.class.h"
 
 int main()
 {
@@ -43,6 +44,11 @@ int main()
     FlagTrap flag("Flaggy");
     flag.attack("Target");
     flag.highFivesGuys();
+
+    std::cout << "\nTesting DiamondTrap:" << std::endl;
+    DiamondTrap diamond("Diamondy");
+    diamond.attack("Target");
+    diamond.whoAmI();
 
     return (0);
 }
